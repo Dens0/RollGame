@@ -2,6 +2,10 @@
 *** GENERAL
 **********************************************/
 
+:root{
+--main-color: #2d733a
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -16,14 +20,14 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-image: linear-gradient(rgba(222, 207, 207, 0.4), rgb(125, 195, 90)), url(back.jpg);
     background-size: cover;
     background-position: center;
-    font-family: Lato;
-    font-weight: 300;
+    font-family: Bahnschrift;
+    font-weight: 400;
     position: relative;
     height: 100vh;
-    color: #555;
+    color: #000000;
 }
 
 .wrapper {
@@ -43,6 +47,7 @@ body {
     float: left;
     height: 600px;
     padding: 100px;
+    position: relative;
 }
 
 
@@ -66,7 +71,7 @@ body {
     text-align: center;
     font-size: 80px;
     font-weight: 100;
-    color: #EB4D4D;
+    color: var(--main-color);
     margin-bottom: 130px;
 }
 
@@ -77,14 +82,14 @@ body {
     content: "\2022";
     font-size: 47px;
     position: absolute;
-    color: #EB4D4D;
+    color: var(--main-color);
     top: -7px;
     right: 10px;
     
 }
 
 .player-current-box {
-    background-color: #EB4D4D;
+    background-color: var(--main-color);
     color: #fff;
     width: 40%;
     margin: 0 auto;
@@ -127,7 +132,7 @@ button:focus {
 }
 
 i {
-    color: #EB4D4D;
+    color: var(--main-color);
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
@@ -140,6 +145,40 @@ i {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
+.maxScore{
+    /*display: block;*/
+    /*transform: translate(-50%);*/
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transform: translatex(-50%);
+    text-align: center;
+
+}
+.maxscore--input{
+    height: 60px;
+    width: 60px;
+    font-size: 25px;
+    text-align: center;
+
+}
+.maxScore-btn{
+    position: absolute;
+    left:-10px;
+    border: 1px solid #928989;
+    width: 60px;
+    height: 60px;
+box-shadow: #2d733a 0px 0px 10px;
+    text-align: center;
+    transition: .3s;
+
+}
+
+.maxScore-btn:hover
+{
+    transform:  translate(-28px,2px);
+}
 
 .dice {
     position: absolute;
@@ -149,6 +188,11 @@ i {
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
-
+#dice-1{
+    top: 120px;
+}
+#dice-2{
+    top: 250px;
+}
 .winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner .player-name { font-weight: 300; color:var(--main-color);}
